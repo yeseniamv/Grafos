@@ -12,33 +12,41 @@ namespace Grafos
     {
         static void Main(string[] args)
         {
-            
-            Lista nodoA = new Lista();            
-            Lista nodoB = new Lista();            
-            Lista nodoC = new Lista(); 
+            List<ListaLigada> Grafo = new List<ListaLigada>();
 
-            nodoA.Agregar("X");
-            nodoA.Agregar("Y");
-            nodoB.Agregar("W");
-            nodoC.Agregar("M");
+            ListaLigada verticeA = new ListaLigada("A");
+            ListaLigada verticeB = new ListaLigada("B");
+            ListaLigada verticeC = new ListaLigada("C");
+            ListaLigada verticeD = new ListaLigada("D");
+            ListaLigada verticeE = new ListaLigada("E");
+            ListaLigada verticeF = new ListaLigada("F");
+            verticeA.Relacionar(verticeB);
+            verticeA.Relacionar(verticeC);
+            verticeA.Relacionar(verticeF);
+            verticeC.Relacionar(verticeD);
+            verticeD.Relacionar(verticeA);
+            verticeD.Relacionar(verticeB);
+            verticeE.Relacionar(verticeA);
+            verticeF.Relacionar(verticeC);
+            verticeF.Relacionar(verticeA);
 
-            List<String> coleccion = new List<String>
+            Grafo.Add(verticeA);
+            Grafo.Add(verticeB);
+            Grafo.Add(verticeC);
+            Grafo.Add(verticeD);
+            Grafo.Add(verticeE);
+            Grafo.Add(verticeF);
+
+            /*
+            foreach(ListaLigada vertice in Grafo)
             {
-                nodoA.Llave(),
-                nodoB.Llave(),
-                nodoC.Llave()
-            };
-            Console.WriteLine("Valores en colección");
-            foreach (String s in coleccion) {  Console.WriteLine(s); }
-            
-            Console.WriteLine("Valores en nodoA");
-            Console.WriteLine(nodoA.Recorrer());
-            Console.WriteLine("Valores en nodoB");
-            Console.WriteLine(nodoB.Recorrer());
-            Console.WriteLine("Valores en nodoC");
-            Console.WriteLine(nodoC.Recorrer());
+                foreach(string dato in vertice)
+                {
 
+                }
+            }
             Console.ReadKey();
+            */
         }
 }
 }
