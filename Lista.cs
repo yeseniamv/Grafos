@@ -19,25 +19,12 @@ namespace Grafos
 
         public string Llave()
         {
-            string dato = string.Empty;
+            string dato;
             dato = nodoInicial.Siguiente.Valor;
-            
+
             return dato;
         }
-        public bool ValidaVacio()
-        {
-            if (nodoInicial.Siguiente == null)
-            {
-                return true;
-            }
-            return false;
-            //return nodoInicial.Siguiente == null;
-
-        }
-        public void VaciarLista()
-        {
-            nodoInicial.Siguiente = null;
-        }
+        
         public string Recorrer()
         {
             string datos = string.Empty;
@@ -60,69 +47,6 @@ namespace Grafos
             }
             Nodo nodoNuevo = new Nodo(valor);
             nodoActual.Siguiente = nodoNuevo;
-        }
-
-        public void AgregarInicio(string valor)
-        {
-            if (ValidaVacio())
-            {
-                Agregar(valor);
-                return;
-            }
-            Nodo nodoNuevo = new Nodo(valor, nodoInicial.Siguiente);
-
-            nodoInicial.Siguiente = nodoNuevo;
-        }
-        public Nodo Buscar(string valor)
-        {
-            if (ValidaVacio())
-            {
-                return null;
-            }
-            nodoActual = nodoInicial;
-            while (nodoActual.Siguiente != null)
-            {
-                nodoActual = nodoActual.Siguiente;
-                if (nodoActual.Valor == valor)
-                {
-                    return nodoActual;
-                }
-            }
-            return null;
-        }
-
-        public Nodo BuscarAnterior(string valor)
-        {
-            if (ValidaVacio() == false)
-            {
-                Nodo nodoBusqueda = nodoInicial;
-
-                while (nodoBusqueda.Siguiente != null
-                            && nodoBusqueda.Siguiente.Valor != valor)
-                {
-                    nodoBusqueda = nodoBusqueda.Siguiente;
-                    if (nodoBusqueda.Siguiente.Valor == valor)
-                    {
-                        return nodoBusqueda;
-                    }
-                }
-            }
-            return null;
-        }
-
-        public void Borrar(string valor)
-        {
-            if (ValidaVacio() == false)
-            {
-                nodoActual = Buscar(valor);
-
-                if (nodoActual != null)
-                {
-                    Nodo nodoAnterior = BuscarAnterior(valor);
-                    nodoAnterior.Siguiente = nodoActual.Siguiente;
-                    nodoActual.Siguiente = null;
-                }
-            }
         }
         
     }

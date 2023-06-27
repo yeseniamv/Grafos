@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coleccion.cs" />
     <Compile Include="Lista.cs" />
     <Compile Include="Nodo.cs" />
     <Compile Include="Program.cs" />
