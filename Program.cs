@@ -14,39 +14,29 @@ namespace Grafos
         {
             List<ListaLigada> Grafo = new List<ListaLigada>();
 
-            ListaLigada verticeA = new ListaLigada("A");
-            ListaLigada verticeB = new ListaLigada("B");
-            ListaLigada verticeC = new ListaLigada("C");
-            ListaLigada verticeD = new ListaLigada("D");
-            ListaLigada verticeE = new ListaLigada("E");
-            ListaLigada verticeF = new ListaLigada("F");
-            verticeA.Relacionar(verticeB);
-            verticeA.Relacionar(verticeC);
-            verticeA.Relacionar(verticeF);
-            verticeC.Relacionar(verticeD);
-            verticeD.Relacionar(verticeA);
-            verticeD.Relacionar(verticeB);
-            verticeE.Relacionar(verticeA);
-            verticeF.Relacionar(verticeC);
-            verticeF.Relacionar(verticeA);
+            ListaLigada verticeG = new ListaLigada("G");
+            ListaLigada verticeH = new ListaLigada("H");
+            ListaLigada verticeI = new ListaLigada("I");
+            ListaLigada verticeJ = new ListaLigada("J");
+            ListaLigada verticeK = new ListaLigada("K");
+            ListaLigada verticeL = new ListaLigada("L");
+            verticeG.Relacionar(verticeK);
+            verticeG.Relacionar(verticeJ);
+            verticeH.Relacionar(verticeG);
+            verticeH.Relacionar(verticeK);
+            verticeI.Relacionar(verticeG);
+            verticeJ.Relacionar(verticeI);
+            verticeK.Relacionar(verticeH);
+            verticeL.Relacionar(verticeI);
+            verticeL.Relacionar(verticeK);
 
-            Grafo.Add(verticeA);
-            Grafo.Add(verticeB);
-            Grafo.Add(verticeC);
-            Grafo.Add(verticeD);
-            Grafo.Add(verticeE);
-            Grafo.Add(verticeF);
+            Grafo.Add(verticeG);
+            Grafo.Add(verticeH);
+            Grafo.Add(verticeI);
+            Grafo.Add(verticeJ);
+            Grafo.Add(verticeK);
+            Grafo.Add(verticeL);
 
-            /*
-            foreach(ListaLigada vertice in Grafo)
-            {
-                foreach(string dato in vertice)
-                {
-
-                }
-            }
-            Console.ReadKey();
-            */
         }
 }
 }

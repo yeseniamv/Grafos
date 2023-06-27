@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Grafo.cs" />
     <Compile Include="ListaLigada.cs" />
     <Compile Include="Nodo.cs" />
     <Compile Include="Program.cs" />
