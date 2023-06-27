@@ -49,7 +49,7 @@ namespace Grafos
             }
             return datos;
         }
-        public void AgregarFinal(string valor)
+        public void Agregar(string valor)
         {
             nodoActual = nodoInicial;
            
@@ -66,7 +66,7 @@ namespace Grafos
         {
             if (ValidaVacio())
             {
-                AgregarFinal(valor);
+                Agregar(valor);
                 return;
             }
             Nodo nodoNuevo = new Nodo(valor, nodoInicial.Siguiente);
@@ -124,5 +124,6 @@ namespace Grafos
                 }
             }
         }
+        
     }
 }

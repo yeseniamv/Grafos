@@ -12,18 +12,15 @@ namespace Grafos
     {
         static void Main(string[] args)
         {
-            /*se hace la colección
-            */
-            
             
             Lista nodoA = new Lista();            
             Lista nodoB = new Lista();            
             Lista nodoC = new Lista(); 
 
-            nodoA.AgregarFinal("X");
-            nodoA.AgregarFinal("Y");
-            nodoB.AgregarFinal("W");
-            nodoC.AgregarFinal("M");
+            nodoA.Agregar("X");
+            nodoA.Agregar("Y");
+            nodoB.Agregar("W");
+            nodoC.Agregar("M");
 
             List<String> coleccion = new List<String>
             {
@@ -31,10 +28,7 @@ namespace Grafos
                 nodoB.Llave(),
                 nodoC.Llave()
             };
-
-
             Console.WriteLine("Valores en la colección");
-            
             foreach (String s in coleccion) {  Console.WriteLine(s); }
             
             Console.WriteLine("Valores en nodoA");

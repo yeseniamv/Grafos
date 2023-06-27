@@ -11,7 +11,6 @@ namespace Grafos
         public string Valor { get; set; }
         public Nodo Siguiente { get; set; }
 
-
         public Nodo(string valor = "", Nodo siguente = null)
         {
             Valor = valor;
